@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+
+  {% block styles %}
+    <!-- Custom styles for this template -->
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="static/custome_home_responsive.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cutive Mono' />
+  {% endblock %}
+  <head>
+      <style>
+        body { background-color: #FFC3B4; font-family: 'Cutive Mono';font-size: 16px; }
+      </style>
+  </head>
+  <body class="homeBody">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <img class="mySlides" src="static/ch2.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch3.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch4.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch5.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch6.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch7.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch8.png" width="50%" height="50%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/ch9.png" width="50%" height="50%" class="col-xs-2 centralImage">
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="row justify-content-center">
+            ABOUT:
+            Mood rings project.
+        </div>
+        <div class="row justify-content-center">
+            (Use the arrows to cycle through the chapters.)
+        </div>
+        <div class="row justify-content-center">
+            A Python code was written to analyse a script for interactions between characters, to extract the emotional content of each interaction, and
+            to represent this in the form of a graph (using networkx/ nxviz).
+            In the images above, each line (edge) indicates an interaction between two characters (nodes).
+            In this case we say that when two characters have multiple consecutive lines (with other checks to minimize false positives) they are interacting.
+            Emotional content of a given line was estimated using data from: http://hedonometer.org/words.html.
+            Above, blue indicates positive interactions and red indicates negative interactions.
+            The result allows us to see tension and resolution as different characters interact throughout the story.
+        </div>
+    </div>
+    <script type="text/javascript" src="static/slide.js"> </script>
+  </body>
+
+{% endblock %}

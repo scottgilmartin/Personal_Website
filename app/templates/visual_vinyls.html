@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+
+  {% block styles %}
+    <!-- Custom styles for this template -->
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="static/custome_home_responsive.css"/>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cutive Mono' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  {% endblock %}
+  <head>
+      <style>
+        body { background-color: #F1EEE9; font-family: 'Cutive Mono';font-size: 16px; }
+      </style>
+  </head>
+  <body class="homeBody">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <img class="mySlides" src="static/vvsomething.png" width="55%" height="60%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/vvcometogether.png" width="55%" height="60%" class="col-xs-2 centralImage">
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="row justify-content-center">
+            ABOUT:
+            Visual vinyls project.
+        </div>
+        <div class="row justify-content-center">
+            (Use the arrows to cycle through the vinyls.)
+        </div>
+        <div class="row justify-content-center">
+            A Python code was written to generate a circular graph where nodes represent beats in a bar and edges
+            represent a movement from a melody note played on its tail node to a note played on its head node.
+            The edges follow the melody of the lead vocal part of the track.
+            The input is a list of the melody note occurrences; for example if the first melody note is on the second beat of the bar, and the second melody note is
+            on the third beat of the bar, the input list would begin with [2,3,...].
+            The result shows the rhythmic signature of the first few bars of the song.
+        </div>
+    </div>
+    <script type="text/javascript" src="static/slide.js"> </script>
+  </body>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+
+  {% block styles %}
+    <!-- Custom styles for this template -->
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="static/custome_home_responsive.css"/>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cutive Mono' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  {% endblock %}
+  <head>
+      <style>
+        body { background-color: #efafff; font-family: 'Cutive Mono';font-size: 16px; }
+      </style>
+  </head>
+  <body class="homeBody">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <img class="mySlides" src="static/evo1.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo2.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo3.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo4.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo5.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo6.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo7.png" width="20%" height="20%" class="col-xs-2 centralImage">
+            <img class="mySlides" src="static/evo8.png" width="20%" height="20%" class="col-xs-2 centralImage">
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="row justify-content-center">
+            ABOUT:
+            Evolution project.
+        </div>
+        <div class="row justify-content-center">
+            (Use the arrows to cycle through the images.)
+        </div>
+        <div class="row justify-content-center">
+            A Python code was written as a simple evolution/ artificial selection simulator.
+            Above are a selection of randomly generated sprites using the simulator, where the last image
+            shows the barcode like 'DNA' from which they are generated.
+            we generate sprites based on mutations of an original 'DNA' matrix.
+            Every sprite has an associated barcode like DNA from which it is drawn by applying the rules
+            of a modified version of Conway's game of life.
+            By performing small mutations on this DNA we can draw a set of similar but distinct sprites.
+            For more info, source code and to see the evolution process see my GitHub: <a href="https://www.github.com/scottgilmartin/Evolution_Simulator">GitHub</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="static/slide.js"> </script>
+  </body>
+
+{% endblock %}

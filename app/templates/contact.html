@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+
+  {% block styles %}
+    <!-- Custom styles for this template -->
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="static/custom_contact_responsive.css"/>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cutive Mono' />
+
+  {% endblock %}
+  <head>
+      <style>
+        body { background-color: #e8ffcc; font-family: 'Cutive Mono';font-size: 16px; }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <p class="contactinfo toplink"><b>Email</b>: scott.gilmartin45@gmail.com</p>
+        </div>
+        <div class="row justify-content-center">
+            <p class="contactinfo"><b>Phone</b>: +44 (0) 7564674725</p>
+        </div>
+         <div class="row justify-content-center">
+            <p class="contactinfo"><b>GitHub</b>: <a href="https://www.github.com/scottgilmartin"> https://www.github.com/scottgilmartin</a></p>
+        </div>
+    </div>
+  </body>
+
+{% endblock %}

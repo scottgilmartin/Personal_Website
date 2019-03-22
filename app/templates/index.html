@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+
+  {% block styles %}
+    <!-- Custom styles for this template -->
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="static/custome_home_responsive.css"/>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cutive Mono' />
+
+  {% endblock %}
+  <head>
+      <style>
+        body { font-family: 'Cutive Mono';font-size: 16px; }
+      </style>
+  </head>
+  <body class="homeBody">
+    <div class="container">
+        <div class="row justify-content-center">
+            <img src="{{ central_image }}" width="40%" height="40%" class="col-xs-2 centralImage"/>
+        </div>
+        <div class="row justify-content-center">
+
+            {% for link in links %}
+                <a class="centralLinks col-lg-2" href="{{ url_for( link.link ) }}">{{ link.display }}</a>
+            {% endfor %}
+            Welcome to my website.
+
+        </div>
+        <div class="row justify-content-center">
+            ABOUT: A simple website to host some of my Python based graphics projects. Use the bar at the top to navigate.
+        </div>
+        <div class="row justify-content-center">
+            <a href="https://www.github.com/scottgilmartin">GitHub</a>
+        </div>
+    </div>
+  </body>
+
+{% endblock %}
